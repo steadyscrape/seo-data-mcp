@@ -1,14 +1,14 @@
 # SEO Data MCP: live SEO data for AI agents
 
-A remote MCP server (Streamable HTTP) that gives Claude, Cursor, VS Code and other MCP clients live SEO data: Google keyword volume and difficulty, live SERP rank checks, domain traffic, ranked keywords, backlinks, Google Trends and YouTube stats. It runs as the [SEO Data MCP Server](https://apify.com/steady-scrape/seo-data-mcp-server) Actor on Apify, in Standby mode.
+A remote MCP server (Streamable HTTP) that gives Claude, Cursor, VS Code and other MCP clients live SEO data: Google keyword volume and difficulty, live SERP rank checks, domain traffic, ranked keywords, backlinks, Google Trends and YouTube stats. It is hosted on the [SteadyScrape MCP gateway](https://mcp.steadyscrape.dev/seo). Tools run in your own Apify account.
 
 **Endpoint:**
 
 ```
-https://steady-scrape-1--seo-data-mcp-server.apify.actor/mcp
+https://mcp.steadyscrape.dev/seo/mcp
 ```
 
-Auth: `Authorization: Bearer <APIFY_TOKEN>` ([get a token](https://console.apify.com/settings/integrations)). Pay per successful call, billed to your Apify account; failed calls are free.
+Auth: clients that support MCP OAuth (Claude.ai, VS Code, Cursor) open an Apify sign-in the first time, or send `Authorization: Bearer <APIFY_TOKEN>` ([get a token](https://console.apify.com/settings/integrations)). Pay per successful call, billed to your Apify account.
 
 ## Tools
 
@@ -31,8 +31,7 @@ Auth: `Authorization: Bearer <APIFY_TOKEN>` ([get a token](https://console.apify
 {
   "mcpServers": {
     "seo-data": {
-      "url": "https://steady-scrape-1--seo-data-mcp-server.apify.actor/mcp",
-      "headers": { "Authorization": "Bearer <YOUR_APIFY_TOKEN>" }
+      "url": "https://mcp.steadyscrape.dev/seo/mcp"
     }
   }
 }
@@ -41,8 +40,7 @@ Auth: `Authorization: Bearer <APIFY_TOKEN>` ([get a token](https://console.apify
 **Claude Code:**
 
 ```bash
-claude mcp add --transport http seo-data "https://steady-scrape-1--seo-data-mcp-server.apify.actor/mcp" \
-  --header "Authorization: Bearer $APIFY_TOKEN"
+claude mcp add --transport http seo-data "https://mcp.steadyscrape.dev/seo/mcp"
 ```
 
 ## Registry files

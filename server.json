@@ -3,8 +3,8 @@
   "name": "io.github.steadyscrape/seo-data-mcp",
   "title": "SEO Data MCP (SteadyScrape)",
   "description": "Keyword volume, live SERP ranks, domain traffic, ranked keywords, backlinks, Google Trends, YouTube.",
-  "version": "1.0.0",
-  "websiteUrl": "https://apify.com/steady-scrape/seo-data-mcp-server",
+  "version": "1.1.0",
+  "websiteUrl": "https://mcp.steadyscrape.dev/seo",
   "repository": {
     "url": "https://github.com/steadyscrape/seo-data-mcp",
     "source": "github"
@@ -12,15 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://steady-scrape-1--seo-data-mcp-server.apify.actor/mcp",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Bearer <your Apify API token> (from console.apify.com/settings/integrations).",
-          "isRequired": true,
-          "isSecret": true
-        }
-      ]
+      "url": "https://mcp.steadyscrape.dev/seo/mcp"
     }
   ]
 }
