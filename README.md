@@ -47,6 +47,7 @@ claude mcp add --transport http seo-data "https://mcp.steadyscrape.dev/seo/mcp"
 
 - [`server.json`](server.json): official MCP Registry entry (`io.github.steadyscrape/seo-data-mcp`), published by the GitHub Actions workflow in `.github/workflows/`
 - [`glama.json`](glama.json): Glama maintainer claim
+- Glama listing: [glama.ai/mcp/connectors/io.github.steadyscrape/seo-data-mcp](https://glama.ai/mcp/connectors/io.github.steadyscrape/seo-data-mcp)
 
 More SteadyScrape examples: [steadyscrape-examples](https://github.com/steadyscrape/steadyscrape-examples).
 
